@@ -31,3 +31,30 @@ universes:
     enabled: false      # needs intraday/options-chain data; free sources are delayed. Decide after Stage 1-3 results.
     label: "Options / intraday"
     symbols: []
+
+# ---- Rs 6 lakh virtual portfolio (from your Investment Bot design): six internal Rs 1 lakh buckets ----
+usd_inr_fallback: 88.0         # used only if the live USD/INR rate can't be fetched
+portfolio:
+  risk_per_trade_pct: 1.0      # risk at most 1% of a bucket (Rs 1,000) if a trade hits its stop
+  max_position_pct: 40         # never put more than 40% of a bucket in one trade
+  buckets:
+    india_long_term: {label: "India Long-Term Equity", capital: 100000, active: true}
+    india_intraday:  {label: "India Intraday",          capital: 100000, active: false}
+    options:         {label: "Options",                 capital: 100000, active: false}
+    commodities:     {label: "Futures / Commodities",   capital: 100000, active: true}
+    us_global:       {label: "US / Global",             capital: 100000, active: true}
+    crypto:          {label: "Crypto / Experimental",   capital: 100000, active: true}
+  symbol_bucket:
+    ITC.NS: india_long_term
+    TMPV.NS: india_long_term
+    RELIANCE.NS: india_long_term
+    HDFCBANK.NS: india_long_term
+    INFY.NS: india_long_term
+    NIFTYBEES.NS: india_long_term
+    GOLDBEES.NS: commodities
+    "^NSEI": india_long_term
+    GC=F: commodities
+    CL=F: commodities
+    "^GSPC": us_global
+    BTC-USD: crypto
+    ETH-USD: crypto

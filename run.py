@@ -8,6 +8,14 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 STATE_JSON = os.path.join(ROOT, "docs", "state.json")
 
 
+CFG = {}
+FX = {"usd_inr": 88.0}
+
+
+def fx_for(sym):
+    return 1.0 if sym.endswith(".NS") else FX["usd_inr"]
+
+
 def cfg():
     with open(os.path.join(ROOT, "config.yaml")) as f:
         return yaml.safe_load(f)
@@ -21,12 +29,16 @@ def process_inbox(led):
     cmds, led["tg_offset"] = notify.fetch_commands(led.get("tg_offset", 0))
     for c in cmds:
         if c["action"] == "bought":
-            ledger.open_position(led, c["symbol"], c["price"], c["qty"])
-            notify.send(f"Logged paper BUY {c['symbol']} @ {c['price']}. I'm now watching it for exit signals.")
+            b = CFG["portfolio"]["symbol_bucket"].get(c["symbol"])
+            if not b:
+                notify.send(f"I don't track {c['symbol']}. Add it to config.yaml first.")
+                continue
+            ledger.open_position(led, c["symbol"], c["price"], c["qty"], b, fx_for(c["symbol"]))
+            notify.send(f"Logged paper BUY {c['symbol']} @ {c['price']} in {CFG['portfolio']['buckets'][b]['label']}. Watching it for exits.")
         else:
             rec = ledger.close_position(led, c["symbol"], c["price"])
             if rec:
-                notify.send(f"Logged SELL {c['symbol']} @ {c['price']}. Actual {rec['actual_return_pct']}% vs predicted "
+                notify.send(f"Logged SELL {c['symbol']} @ {c['price']} (P&L Rs {rec['pnl_inr']}). Actual {rec['actual_return_pct']}% vs predicted "
                             f"{rec['predicted_return_pct']}% (error {rec['error_pct']}%).")
             else:
                 notify.send(f"No open paper position found for {c['symbol']}.")
@@ -40,8 +52,26 @@ def cooled_down(led, symbol, days):
     return (dt.datetime.utcnow() - last).days >= days
 
 
+def size(sig, led, c, px, latest):
+    pc = c["portfolio"]
+    bid = pc["symbol_bucket"].get(sig["symbol"])
+    if not bid:
+        return None
+    b = pc["buckets"][bid]
+    cash = next(x for x in ledger.portfolio(led, c, {}) if x["id"] == bid)["cash"]
+    notional = min(b["capital"] * pc["risk_per_trade_pct"] / 100 / (sig["risk_pct"] / 100), b["capital"] * pc["max_position_pct"] / 100, cash)
+    qty = notional / (px * fx_for(sig["symbol"]))
+    qty = int(qty) if bid == "india_long_term" else round(qty, 4)
+    if qty <= 0:
+        return None
+    sig.update(bucket=bid, bucket_label=b["label"], suggested_qty=qty, size_inr=round(qty * px * fx_for(sig["symbol"])))
+    return sig
+
+
 def scan():
     c = cfg()
+    CFG.update(c)
+    FX["usd_inr"] = data.get_usdinr(c["usd_inr_fallback"])
     rule = c["rule"]
     led = ledger.load()
     health, latest = {}, []
@@ -72,16 +102,18 @@ def scan():
                         notify.send(f"EXIT {sym} ({why}). Last price {px:.2f}. Paper gain since your buy: {gain:+.2f}%. "
                                     f"Reply: sold {sym} <price>")
                         led["last_alert"]["EXIT:" + sym] = ledger.now()
+                        led["exits"].append({"symbol": sym, "reason": why, "ts": ledger.now(), "decision_id": held["decision_id"]})
                 else:
                     stats = backtest.run(df, rule)
                     sig = signals.make_signal(sym, df, rule, stats)
+                    sig = size(sig, led, c, px, latest) if sig else None
                     if sig and cooled_down(led, sym, c["alert_cooldown_days"]):
                         ledger.record_signal(led, sig)
                         bt = (f"History of this rule on {sym}: {stats['trades']} trades, {stats['win_rate_pct']}% won, "
                               f"avg {stats['avg_return_pct']}%." if stats.get("trades") else "Not enough history to test this rule.")
-                        notify.send(f"ENTER {sym} ~{sig['entry']}\nStop {sig['stop']} (risk {sig['risk_pct']}%)\n"
+                        notify.send(f"ENTER {sym} [{sig['decision_id']}] ~{sig['entry']}\nBucket: {sig['bucket_label']}. Suggested: {sig['suggested_qty']} units (about Rs {sig['size_inr']})\nStop {sig['stop']} (risk {sig['risk_pct']}%)\n"
                                     f"Target {sig['target']} (aim +{sig['predicted_return_pct']}%)\n{bt}\n"
-                                    f"Paper size: Rs {c['paper_capital_per_trade']}. Reply: bought {sym} <price> <qty>")
+                                    f"Reply: bought {sym} <price> <qty>")
                 h["ok"] += 1
             except Exception as e:
                 h["failed"].append(f"{sym}: {e}"[:120])
@@ -91,8 +123,10 @@ def scan():
         health[uid] = h
 
     ledger.save(led)
-    state = {"heartbeat": utc(), "interval_min": c["scan_interval_minutes"], "health": health, "latest": latest,
-             "signals": led["signals"][-20:], "positions": led["positions"], "accuracy": ledger.accuracy(led),
+    prices = {x["symbol"]: x["price"] for x in latest}
+    pf = ledger.portfolio(led, c, prices)
+    state = {"heartbeat": utc(), "portfolio": pf, "exits": led["exits"][-20:], "usd_inr": round(FX["usd_inr"], 2), "interval_min": c["scan_interval_minutes"], "health": health, "latest": latest,
+             "signals": led["signals"][-30:], "positions": led["positions"], "accuracy": ledger.accuracy(led),
              "closed": led["closed"][-20:]}
     os.makedirs(os.path.dirname(STATE_JSON), exist_ok=True)
     with open(STATE_JSON, "w") as f:

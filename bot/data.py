@@ -26,3 +26,13 @@ def get_history(symbol: str, days: int = 800) -> pd.DataFrame:
     df = df[["Open", "High", "Low", "Close"]].dropna()
     df.index = pd.to_datetime(df.index).tz_localize(None)
     return df
+
+
+def get_usdinr(default: float) -> float:
+    if os.environ.get("BOT_SYNTHETIC") == "1":
+        return default
+    try:
+        import yfinance as yf
+        return float(yf.Ticker("INR=X").history(period="5d")["Close"].dropna().iloc[-1])
+    except Exception:
+        return default

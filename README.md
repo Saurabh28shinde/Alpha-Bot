@@ -1,6 +1,6 @@
 # Alpha Bot - paper-trading alert engine (free, ~20 min setup)
 
-**What it does:** every 30 min on weekdays it scans your watchlist (Stage 1 India equity/ETFs, Stage 2 crypto,
+**What it does:** every 30 min, every day, around the clock it scans your watchlist (Stage 1 India equity/ETFs, Stage 2 crypto,
 Stage 3 commodities/global indices), sends ENTER / EXIT alerts to Telegram, logs the trades you report, compares
 predicted vs actual return, and updates a live dashboard. Fake money only. You place every order yourself.
 

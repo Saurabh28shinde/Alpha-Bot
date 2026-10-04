@@ -26,10 +26,10 @@ def test_backtest_runs():
 
 def test_ledger_roundtrip(tmp_path):
     led = ledger.load(str(tmp_path / "l.json"))
-    ledger.record_signal(led, {"symbol": "ITC.NS", "stop": 90, "target": 110, "predicted_return_pct": 5.0})
-    ledger.open_position(led, "ITC.NS", 100.0, 10)
+    ledger.record_signal(led, {"symbol": "ITC.NS", "decision_id": "D-1", "stop": 90, "target": 110, "predicted_return_pct": 5.0})
+    ledger.open_position(led, "ITC.NS", 100.0, 10, "india_long_term", 1.0)
     rec = ledger.close_position(led, "ITC.NS", 103.0)
-    assert rec["actual_return_pct"] == 3.0 and rec["error_pct"] == -2.0
+    assert rec["pnl_inr"] == 30 and rec["actual_return_pct"] == 3.0 and rec["error_pct"] == -2.0
     assert ledger.accuracy(led)["closed_trades"] == 1
 
 

@@ -1,0 +1,33 @@
+# Alpha Bot configuration. Edit here, nothing else needs touching.
+paper_capital_per_trade: 5000      # Rs per paper trade (fake money)
+alert_cooldown_days: 3             # don't repeat the same alert within N days
+scan_interval_minutes: 30          # must match the cron in .github/workflows/scan.yml
+rule:
+  atr_stop_mult: 2.0
+  atr_target_mult: 3.0
+  max_hold_days: 30
+  rsi_entry_max: 45
+  rsi_exit_min: 75
+
+# Stages switch on one by one. Dashboard shows each as Not connected -> Running.
+universes:
+  india_equity:
+    stage: 1
+    enabled: true
+    label: "India equity + ETFs"
+    symbols: [ITC.NS, TATAMOTORS.NS, RELIANCE.NS, HDFCBANK.NS, INFY.NS, NIFTYBEES.NS, GOLDBEES.NS]
+  crypto:
+    stage: 2
+    enabled: true
+    label: "Crypto"
+    symbols: [BTC-USD, ETH-USD]
+  global_commodities:
+    stage: 3
+    enabled: true
+    label: "Commodities + global indices"
+    symbols: [GC=F, CL=F, "^GSPC", "^NSEI"]
+  options_intraday:
+    stage: 4
+    enabled: false      # needs intraday/options-chain data; free sources are delayed. Decide after Stage 1-3 results.
+    label: "Options / intraday"
+    symbols: []

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpha Bot Monitor</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#14181f;--mut:#667085;--ok:#12a150;--warn:#d97706;--bad:#d92d20;--off:#98a2b3;--bd:#e4e7ec}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1116;--card:#171b22;--tx:#e8ecf2;--mut:#98a2b3;--bd:#2a313c}}
+body{margin:0;font:14px/1.45 system-ui,sans-serif;background:var(--bg);color:var(--tx);padding:16px;max-width:980px;margin:auto}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:22px 0 8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:var(--off)}
+.running .dot{background:var(--ok);animation:p 1.6s infinite}.degraded .dot,.initialising .dot,.stale .dot{background:var(--warn)}.error .dot{background:var(--bad)}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(18,161,80,.5)}100%{box-shadow:0 0 0 9px rgba(18,161,80,0)}}
+.mut{color:var(--mut);font-size:12px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:5px 6px;border-bottom:1px solid var(--bd);font-size:13px}
+.table{overflow-x:auto}
+</style></head><body>
+<h1>Alpha Bot Monitor</h1><div id="hb" class="mut">Waiting for first scan…</div>
+<h2>System health</h2><div id="health" class="grid"></div>
+<h2>Prediction accuracy (paper trades you logged)</h2><div id="acc" class="card mut">No closed trades yet.</div>
+<h2>Open paper positions</h2><div id="pos" class="card table mut">None.</div>
+<h2>Latest signals</h2><div id="sig" class="card table mut">None yet.</div>
+<h2>Watchlist</h2><div id="lat" class="card table mut"></div>
+<script>
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ago=t=>{if(!t)return"never";const m=Math.round((Date.now()-new Date(t))/60000);return m<1?"just now":m<90?m+" min ago":Math.round(m/60)+" h ago"};
+const tbl=(h,rows)=>"<table><tr>"+h.map(x=>"<th>"+x+"</th>").join("")+"</tr>"+rows.map(r=>"<tr>"+r.map(x=>"<td>"+esc(x)+"</td>").join("")+"</tr>").join("")+"</table>";
+async function load(){
+ let s;try{s=await (await fetch("state.json?"+Date.now())).json()}catch(e){return}
+ const stale=(Date.now()-new Date(s.heartbeat))/60000>s.interval_min*3;
+ document.getElementById("hb").innerHTML=`<span class="${stale?'stale':'running'}"><span class="dot"></span></span>Last heartbeat ${ago(s.heartbeat)} ${stale?"- STALE, scheduler may have stopped":""}`;
+ document.getElementById("health").innerHTML=Object.values(s.health).sort((a,b)=>a.stage-b.stage).map(h=>{
+  const st=h.status==="running"&&stale?"stale":h.status;
+  return `<div class="card ${st}"><b><span class="dot"></span>${esc(h.label)}</b><div class="mut">Stage ${h.stage} · ${esc(st.replace("_"," "))}</div>
+  <div class="mut">Last scan ${ago(h.last_run)} · last success ${ago(h.last_ok)}</div>${h.failed.length?`<div class="mut" style="color:var(--bad)">${esc(h.failed.join("; "))}</div>`:""}</div>`}).join("");
+ const a=s.accuracy;if(a.closed_trades)document.getElementById("acc").innerHTML=`${a.closed_trades} closed · win rate ${a.win_rate_pct}% · avg return ${a.avg_actual_return_pct}% · mean prediction error ${a.mean_abs_prediction_error_pct??"n/a"}%`;
+ if(s.positions.length)document.getElementById("pos").innerHTML=tbl(["Symbol","Bought at","Stop","Target","Since"],s.positions.map(p=>[p.symbol,p.price,p.stop,p.target,ago(p.ts)]));
+ if(s.signals.length)document.getElementById("sig").innerHTML=tbl(["When","Symbol","Entry","Stop","Target","Rule's own history"],s.signals.slice().reverse().map(x=>[ago(x.ts),x.symbol,x.entry,x.stop,x.target,x.backtest&&x.backtest.trades?`${x.backtest.win_rate_pct}% won / ${x.backtest.trades} trades`:"n/a"]));
+ document.getElementById("lat").innerHTML=tbl(["Symbol","Price","RSI","Uptrend","As of"],s.latest.map(x=>[x.symbol,x.price,x.rsi,x.trend_up?"yes":"no",x.asof]));
+}
+load();setInterval(load,60000);
+</script></body></html>

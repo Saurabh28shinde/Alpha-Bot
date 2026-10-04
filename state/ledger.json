@@ -3,5 +3,7 @@
  "positions": [],
  "closed": [],
  "last_alert": {},
- "tg_offset": 976962623
+ "tg_offset": 976962623,
+ "exits": [],
+ "seq": 0
 }

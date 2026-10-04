@@ -15,7 +15,7 @@ universes:
     stage: 1
     enabled: true
     label: "India equity + ETFs"
-    symbols: [ITC.NS, TATAMOTORS.NS, RELIANCE.NS, HDFCBANK.NS, INFY.NS, NIFTYBEES.NS, GOLDBEES.NS]
+    symbols: [ITC.NS, TMPV.NS, RELIANCE.NS, HDFCBANK.NS, INFY.NS, NIFTYBEES.NS, GOLDBEES.NS]
   crypto:
     stage: 2
     enabled: true

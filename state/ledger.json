@@ -1,9 +1,33 @@
 {
- "signals": [],
+ "signals": [
+  {
+   "symbol": "CL=F",
+   "entry": 89.15,
+   "stop": 80.04,
+   "target": 102.81,
+   "predicted_return_pct": 15.32,
+   "risk_pct": 10.21,
+   "rsi": 44.2,
+   "backtest": {
+    "trades": 22,
+    "win_rate_pct": 40.9,
+    "avg_return_pct": -0.4,
+    "worst_pct": -6.23
+   },
+   "bucket": "commodities",
+   "bucket_label": "Futures / Commodities",
+   "suggested_qty": 1.141,
+   "size_inr": 9794,
+   "decision_id": "D-261005-001",
+   "ts": "2026-10-05T18:45:14Z"
+  }
+ ],
  "positions": [],
  "closed": [],
- "last_alert": {},
+ "last_alert": {
+  "CL=F": "2026-10-05T18:45:14Z"
+ },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 0
+ "seq": 1
 }

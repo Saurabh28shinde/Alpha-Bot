@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-04T23:37:04Z",
+ "heartbeat": "2026-10-05T00:03:30Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-04T23:37:00Z",
+   "last_run": "2026-10-05T00:03:27Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-04T23:37:02Z"
+   "last_ok": "2026-10-05T00:03:29Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-04T23:37:02Z",
+   "last_run": "2026-10-05T00:03:29Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-04T23:37:03Z"
+   "last_ok": "2026-10-05T00:03:29Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-04T23:37:03Z",
+   "last_run": "2026-10-05T00:03:29Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-04T23:37:04Z"
+   "last_ok": "2026-10-05T00:03:30Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-04T23:37:04Z",
+   "last_run": "2026-10-05T00:03:30Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,32 +168,32 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 86472.72,
-   "rsi": 68.5,
+   "price": 86327.85,
+   "rsi": 68.1,
    "trend_up": true,
-   "asof": "2026-10-04"
+   "asof": "2026-10-05"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2725.85,
-   "rsi": 63.9,
+   "price": 2720.76,
+   "rsi": 63.5,
    "trend_up": true,
-   "asof": "2026-10-04"
+   "asof": "2026-10-05"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4173.6,
-   "rsi": 35.5,
+   "price": 4169.7,
+   "rsi": 35.1,
    "trend_up": false,
    "asof": "2026-10-04"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 91.09,
-   "rsi": 47.4,
+   "price": 90.84,
+   "rsi": 47.0,
    "trend_up": true,
    "asof": "2026-10-04"
   },

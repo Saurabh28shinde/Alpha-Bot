@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-09T14:06:46Z",
+ "heartbeat": "2026-10-09T14:43:32Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-09T14:06:41Z",
+   "last_run": "2026-10-09T14:43:28Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-09T14:06:43Z"
+   "last_ok": "2026-10-09T14:43:30Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-09T14:06:43Z",
+   "last_run": "2026-10-09T14:43:30Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-09T14:06:44Z"
+   "last_ok": "2026-10-09T14:43:31Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-09T14:06:44Z",
+   "last_run": "2026-10-09T14:43:31Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-09T14:06:46Z"
+   "last_ok": "2026-10-09T14:43:32Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-09T14:06:46Z",
+   "last_run": "2026-10-09T14:43:32Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,40 +168,40 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 82683.13,
-   "rsi": 50.6,
+   "price": 82861.49,
+   "rsi": 51.3,
    "trend_up": true,
    "asof": "2026-10-09"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2485.14,
-   "rsi": 38.9,
+   "price": 2484.56,
+   "rsi": 38.8,
    "trend_up": true,
    "asof": "2026-10-09"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4220.2,
-   "rsi": 43.9,
+   "price": 4209.3,
+   "rsi": 42.8,
    "trend_up": false,
    "asof": "2026-10-09"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 91.45,
-   "rsi": 49.3,
+   "price": 91.4,
+   "rsi": 49.2,
    "trend_up": true,
    "asof": "2026-10-09"
   },
   {
    "symbol": "^GSPC",
    "universe": "global_commodities",
-   "price": 7784.83,
-   "rsi": 57.9,
+   "price": 7788.87,
+   "rsi": 58.2,
    "trend_up": true,
    "asof": "2026-10-09"
   },

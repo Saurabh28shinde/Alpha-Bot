@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-09T12:46:11Z",
+ "heartbeat": "2026-10-09T13:08:36Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -69,40 +69,40 @@
   }
  ],
  "exits": [],
- "usd_inr": 96.73,
+ "usd_inr": 96.72,
  "interval_min": 30,
  "health": {
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-09T12:46:07Z",
+   "last_run": "2026-10-09T13:08:33Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-09T12:46:09Z"
+   "last_ok": "2026-10-09T13:08:35Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-09T12:46:09Z",
+   "last_run": "2026-10-09T13:08:35Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-09T12:46:10Z"
+   "last_ok": "2026-10-09T13:08:35Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-09T12:46:10Z",
+   "last_run": "2026-10-09T13:08:35Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-09T12:46:11Z"
+   "last_ok": "2026-10-09T13:08:36Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-09T12:46:11Z",
+   "last_run": "2026-10-09T13:08:36Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,32 +168,32 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 83025.44,
-   "rsi": 51.8,
+   "price": 83050.67,
+   "rsi": 51.9,
    "trend_up": true,
    "asof": "2026-10-09"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2496.27,
-   "rsi": 40.1,
+   "price": 2499.75,
+   "rsi": 40.5,
    "trend_up": true,
    "asof": "2026-10-09"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4208.9,
-   "rsi": 42.7,
+   "price": 4199.9,
+   "rsi": 41.7,
    "trend_up": false,
    "asof": "2026-10-09"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 90.89,
-   "rsi": 48.3,
+   "price": 91.3,
+   "rsi": 49.0,
    "trend_up": true,
    "asof": "2026-10-09"
   },

@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-13T04:06:49Z",
+ "heartbeat": "2026-10-13T04:44:57Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -69,40 +69,40 @@
   }
  ],
  "exits": [],
- "usd_inr": 95.21,
+ "usd_inr": 95.29,
  "interval_min": 30,
  "health": {
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-13T04:06:45Z",
+   "last_run": "2026-10-13T04:44:54Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-13T04:06:47Z"
+   "last_ok": "2026-10-13T04:44:56Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-13T04:06:47Z",
+   "last_run": "2026-10-13T04:44:56Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-13T04:06:48Z"
+   "last_ok": "2026-10-13T04:44:56Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-13T04:06:48Z",
+   "last_run": "2026-10-13T04:44:56Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-13T04:06:49Z"
+   "last_ok": "2026-10-13T04:44:57Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-13T04:06:49Z",
+   "last_run": "2026-10-13T04:44:57Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -112,90 +112,90 @@
   {
    "symbol": "ITC.NS",
    "universe": "india_equity",
-   "price": 258.85,
-   "rsi": 44.8,
+   "price": 259.8,
+   "rsi": 45.5,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "TMPV.NS",
    "universe": "india_equity",
-   "price": 282.15,
-   "rsi": 39.2,
+   "price": 283.95,
+   "rsi": 40.9,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "RELIANCE.NS",
    "universe": "india_equity",
-   "price": 1163.1,
-   "rsi": 34.2,
+   "price": 1164.3,
+   "rsi": 34.4,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "HDFCBANK.NS",
    "universe": "india_equity",
-   "price": 714.65,
-   "rsi": 49.1,
+   "price": 712.45,
+   "rsi": 48.2,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "INFY.NS",
    "universe": "india_equity",
-   "price": 1030.5,
-   "rsi": 47.2,
+   "price": 1043.2,
+   "rsi": 50.2,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "NIFTYBEES.NS",
    "universe": "india_equity",
-   "price": 256.72,
-   "rsi": 33.9,
+   "price": 257.58,
+   "rsi": 35.6,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "GOLDBEES.NS",
    "universe": "india_equity",
-   "price": 121.13,
-   "rsi": 41.9,
+   "price": 121.3,
+   "rsi": 42.4,
    "trend_up": false,
    "asof": "2026-10-13"
   },
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 83220.47,
-   "rsi": 52.4,
+   "price": 83361.32,
+   "rsi": 53.0,
    "trend_up": true,
    "asof": "2026-10-13"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2505.14,
-   "rsi": 42.0,
+   "price": 2512.51,
+   "rsi": 42.6,
    "trend_up": true,
    "asof": "2026-10-13"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4190.6,
-   "rsi": 41.4,
+   "price": 4215.2,
+   "rsi": 44.2,
    "trend_up": false,
-   "asof": "2026-10-12"
+   "asof": "2026-10-13"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 93.74,
-   "rsi": 53.8,
+   "price": 92.57,
+   "rsi": 51.3,
    "trend_up": true,
-   "asof": "2026-10-12"
+   "asof": "2026-10-13"
   },
   {
    "symbol": "^GSPC",
@@ -208,8 +208,8 @@
   {
    "symbol": "^NSEI",
    "universe": "global_commodities",
-   "price": 22488.9,
-   "rsi": 37.7,
+   "price": 22558.65,
+   "rsi": 39.5,
    "trend_up": false,
    "asof": "2026-10-13"
   }

@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-19T20:20:13Z",
+ "heartbeat": "2026-10-19T20:56:08Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-19T20:20:10Z",
+   "last_run": "2026-10-19T20:56:04Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-19T20:20:12Z"
+   "last_ok": "2026-10-19T20:56:06Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-19T20:20:12Z",
+   "last_run": "2026-10-19T20:56:06Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-19T20:20:12Z"
+   "last_ok": "2026-10-19T20:56:06Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-19T20:20:12Z",
+   "last_run": "2026-10-19T20:56:06Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-19T20:20:13Z"
+   "last_ok": "2026-10-19T20:56:08Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-19T20:20:13Z",
+   "last_run": "2026-10-19T20:56:08Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,32 +168,32 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 81943.16,
-   "rsi": 48.4,
+   "price": 81887.7,
+   "rsi": 48.2,
    "trend_up": true,
    "asof": "2026-10-19"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2399.15,
-   "rsi": 37.5,
+   "price": 2397.06,
+   "rsi": 37.4,
    "trend_up": true,
    "asof": "2026-10-19"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4159.7,
-   "rsi": 41.7,
+   "price": 4157.3,
+   "rsi": 41.5,
    "trend_up": false,
    "asof": "2026-10-19"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 98.35,
-   "rsi": 59.1,
+   "price": 98.45,
+   "rsi": 59.3,
    "trend_up": true,
    "asof": "2026-10-19"
   },

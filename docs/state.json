@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-22T17:53:12Z",
+ "heartbeat": "2026-10-22T18:16:03Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-22T17:53:09Z",
+   "last_run": "2026-10-22T18:16:00Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-22T17:53:10Z"
+   "last_ok": "2026-10-22T18:16:02Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-22T17:53:10Z",
+   "last_run": "2026-10-22T18:16:02Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-22T17:53:11Z"
+   "last_ok": "2026-10-22T18:16:03Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-22T17:53:11Z",
+   "last_run": "2026-10-22T18:16:03Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-22T17:53:12Z"
+   "last_ok": "2026-10-22T18:16:03Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-22T17:53:12Z",
+   "last_run": "2026-10-22T18:16:03Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,24 +168,24 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 81207.74,
-   "rsi": 45.7,
+   "price": 80996.77,
+   "rsi": 45.0,
    "trend_up": true,
    "asof": "2026-10-22"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2378.7,
-   "rsi": 38.2,
+   "price": 2372.78,
+   "rsi": 37.8,
    "trend_up": true,
    "asof": "2026-10-22"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4060.0,
-   "rsi": 34.0,
+   "price": 4058.0,
+   "rsi": 33.9,
    "trend_up": false,
    "asof": "2026-10-22"
   },
@@ -200,8 +200,8 @@
   {
    "symbol": "^GSPC",
    "universe": "global_commodities",
-   "price": 7651.71,
-   "rsi": 44.3,
+   "price": 7650.45,
+   "rsi": 44.2,
    "trend_up": true,
    "asof": "2026-10-22"
   },

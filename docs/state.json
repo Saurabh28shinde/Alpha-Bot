@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-25T14:52:09Z",
+ "heartbeat": "2026-10-25T15:13:20Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-25T14:52:07Z",
+   "last_run": "2026-10-25T15:13:15Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-25T14:52:08Z"
+   "last_ok": "2026-10-25T15:13:17Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-25T14:52:08Z",
+   "last_run": "2026-10-25T15:13:17Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-25T14:52:09Z"
+   "last_ok": "2026-10-25T15:13:18Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-25T14:52:09Z",
+   "last_run": "2026-10-25T15:13:18Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-25T14:52:09Z"
+   "last_ok": "2026-10-25T15:13:20Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-25T14:52:09Z",
+   "last_run": "2026-10-25T15:13:20Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,16 +168,16 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 80440.0,
-   "rsi": 43.0,
+   "price": 80594.17,
+   "rsi": 43.5,
    "trend_up": true,
    "asof": "2026-10-25"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2337.37,
-   "rsi": 35.0,
+   "price": 2340.86,
+   "rsi": 35.2,
    "trend_up": true,
    "asof": "2026-10-25"
   },
@@ -487,6 +487,48 @@
    "size_inr": 19154,
    "decision_id": "D-261023-013",
    "ts": "2026-10-23T22:52:56Z"
+  },
+  {
+   "symbol": "ETH-USD",
+   "entry": 2340.86,
+   "stop": 2160.58,
+   "target": 2611.28,
+   "predicted_return_pct": 11.55,
+   "risk_pct": 7.7,
+   "rsi": 35.2,
+   "backtest": {
+    "trades": 85,
+    "win_rate_pct": 51.8,
+    "avg_return_pct": -0.09,
+    "worst_pct": -11.1
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0584,
+   "size_inr": 12978,
+   "decision_id": "D-261025-014",
+   "ts": "2026-10-25T15:13:17Z"
+  },
+  {
+   "symbol": "^GSPC",
+   "entry": 7623.68,
+   "stop": 7479.03,
+   "target": 7840.66,
+   "predicted_return_pct": 2.85,
+   "risk_pct": 1.9,
+   "rsi": 42.2,
+   "backtest": {
+    "trades": 57,
+    "win_rate_pct": 50.9,
+    "avg_return_pct": 0.06,
+    "worst_pct": -2.48
+   },
+   "bucket": "us_global",
+   "bucket_label": "US / Global",
+   "suggested_qty": 0.0553,
+   "size_inr": 40021,
+   "decision_id": "D-261025-015",
+   "ts": "2026-10-25T15:13:19Z"
   }
  ],
  "positions": [],

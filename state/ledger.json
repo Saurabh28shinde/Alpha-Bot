@@ -335,17 +335,38 @@
    "size_inr": 19760,
    "decision_id": "D-261026-016",
    "ts": "2026-10-26T22:58:39Z"
+  },
+  {
+   "symbol": "ETH-USD",
+   "entry": 2333.45,
+   "stop": 2166.33,
+   "target": 2584.13,
+   "predicted_return_pct": 10.74,
+   "risk_pct": 7.16,
+   "rsi": 36.5,
+   "backtest": {
+    "trades": 86,
+    "win_rate_pct": 52.3,
+    "avg_return_pct": -0.09,
+    "worst_pct": -11.1
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0629,
+   "size_inr": 13974,
+   "decision_id": "D-261028-017",
+   "ts": "2026-10-28T15:14:55Z"
   }
  ],
  "positions": [],
  "closed": [],
  "last_alert": {
   "CL=F": "2026-10-05T18:45:14Z",
-  "ETH-USD": "2026-10-25T15:13:17Z",
+  "ETH-USD": "2026-10-28T15:14:55Z",
   "BTC-USD": "2026-10-26T22:58:39Z",
   "^GSPC": "2026-10-25T15:13:19Z"
  },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 16
+ "seq": 17
 }

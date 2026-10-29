@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-29T22:04:08Z",
+ "heartbeat": "2026-10-29T23:01:25Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-29T22:04:04Z",
+   "last_run": "2026-10-29T23:01:22Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-29T22:04:06Z"
+   "last_ok": "2026-10-29T23:01:23Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-29T22:04:06Z",
+   "last_run": "2026-10-29T23:01:23Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-29T22:04:07Z"
+   "last_ok": "2026-10-29T23:01:24Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-29T22:04:07Z",
+   "last_run": "2026-10-29T23:01:24Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-29T22:04:08Z"
+   "last_ok": "2026-10-29T23:01:25Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-29T22:04:08Z",
+   "last_run": "2026-10-29T23:01:25Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,24 +168,24 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 78775.33,
-   "rsi": 38.6,
+   "price": 78811.12,
+   "rsi": 38.7,
    "trend_up": true,
    "asof": "2026-10-29"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2257.46,
-   "rsi": 31.3,
+   "price": 2267.79,
+   "rsi": 32.0,
    "trend_up": true,
    "asof": "2026-10-29"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4033.3,
-   "rsi": 36.1,
+   "price": 4036.0,
+   "rsi": 36.3,
    "trend_up": false,
    "asof": "2026-10-29"
   },
@@ -571,6 +571,27 @@
    "size_inr": 13974,
    "decision_id": "D-261028-017",
    "ts": "2026-10-28T15:14:55Z"
+  },
+  {
+   "symbol": "BTC-USD",
+   "entry": 78811.12,
+   "stop": 74742.2,
+   "target": 84914.49,
+   "predicted_return_pct": 7.74,
+   "risk_pct": 5.16,
+   "rsi": 38.7,
+   "backtest": {
+    "trades": 88,
+    "win_rate_pct": 56.8,
+    "avg_return_pct": 0.39,
+    "worst_pct": -5.53
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0026,
+   "size_inr": 19509,
+   "decision_id": "D-261029-018",
+   "ts": "2026-10-29T23:01:23Z"
   }
  ],
  "positions": [],

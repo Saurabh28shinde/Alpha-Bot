@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-31T09:02:28Z",
+ "heartbeat": "2026-10-31T10:00:24Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-31T09:02:25Z",
+   "last_run": "2026-10-31T10:00:22Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-31T09:02:27Z"
+   "last_ok": "2026-10-31T10:00:23Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-31T09:02:27Z",
+   "last_run": "2026-10-31T10:00:23Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-31T09:02:27Z"
+   "last_ok": "2026-10-31T10:00:24Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-31T09:02:27Z",
+   "last_run": "2026-10-31T10:00:24Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-31T09:02:28Z"
+   "last_ok": "2026-10-31T10:00:24Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-31T09:02:28Z",
+   "last_run": "2026-10-31T10:00:24Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -152,32 +152,32 @@
   {
    "symbol": "NIFTYBEES.NS",
    "universe": "india_equity",
-   "price": 261.88,
-   "rsi": 51.4,
+   "price": 262.89,
+   "rsi": 53.5,
    "trend_up": false,
-   "asof": "2026-10-29"
+   "asof": "2026-10-30"
   },
   {
    "symbol": "GOLDBEES.NS",
    "universe": "india_equity",
-   "price": 116.37,
-   "rsi": 34.3,
+   "price": 115.23,
+   "rsi": 31.2,
    "trend_up": false,
-   "asof": "2026-10-29"
+   "asof": "2026-10-30"
   },
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 77260.42,
-   "rsi": 34.7,
+   "price": 77290.56,
+   "rsi": 34.8,
    "trend_up": true,
    "asof": "2026-10-31"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2240.45,
-   "rsi": 30.2,
+   "price": 2241.8,
+   "rsi": 30.4,
    "trend_up": true,
    "asof": "2026-10-31"
   },

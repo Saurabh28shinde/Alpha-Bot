@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-10-31T14:57:01Z",
+ "heartbeat": "2026-10-31T15:22:45Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-10-31T14:56:58Z",
+   "last_run": "2026-10-31T15:22:41Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-10-31T14:56:59Z"
+   "last_ok": "2026-10-31T15:22:42Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-10-31T14:56:59Z",
+   "last_run": "2026-10-31T15:22:42Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-10-31T14:57:00Z"
+   "last_ok": "2026-10-31T15:22:44Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-10-31T14:57:00Z",
+   "last_run": "2026-10-31T15:22:44Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-10-31T14:57:01Z"
+   "last_ok": "2026-10-31T15:22:45Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-10-31T14:57:01Z",
+   "last_run": "2026-10-31T15:22:45Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -168,7 +168,7 @@
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 77317.47,
+   "price": 77306.77,
    "rsi": 34.9,
    "trend_up": true,
    "asof": "2026-10-31"
@@ -176,8 +176,8 @@
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2245.57,
-   "rsi": 31.0,
+   "price": 2244.64,
+   "rsi": 30.8,
    "trend_up": true,
    "asof": "2026-10-31"
   },
@@ -613,6 +613,27 @@
    "size_inr": 40012,
    "decision_id": "D-261030-019",
    "ts": "2026-10-30T14:19:17Z"
+  },
+  {
+   "symbol": "ETH-USD",
+   "entry": 2244.64,
+   "stop": 2077.93,
+   "target": 2494.71,
+   "predicted_return_pct": 11.14,
+   "risk_pct": 7.43,
+   "rsi": 30.8,
+   "backtest": {
+    "trades": 86,
+    "win_rate_pct": 51.2,
+    "avg_return_pct": -0.15,
+    "worst_pct": -11.1
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0631,
+   "size_inr": 13448,
+   "decision_id": "D-261031-020",
+   "ts": "2026-10-31T15:22:43Z"
   }
  ],
  "positions": [],

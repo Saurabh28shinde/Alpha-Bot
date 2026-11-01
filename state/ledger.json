@@ -419,6 +419,27 @@
    "size_inr": 13448,
    "decision_id": "D-261031-020",
    "ts": "2026-10-31T15:22:43Z"
+  },
+  {
+   "symbol": "BTC-USD",
+   "entry": 77961.15,
+   "stop": 74103.91,
+   "target": 83747.0,
+   "predicted_return_pct": 7.42,
+   "risk_pct": 4.95,
+   "rsi": 38.2,
+   "backtest": {
+    "trades": 87,
+    "win_rate_pct": 56.3,
+    "avg_return_pct": 0.38,
+    "worst_pct": -5.53
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0027,
+   "size_inr": 19984,
+   "decision_id": "D-261101-021",
+   "ts": "2026-11-01T23:23:56Z"
   }
  ],
  "positions": [],
@@ -426,10 +447,10 @@
  "last_alert": {
   "CL=F": "2026-10-05T18:45:14Z",
   "ETH-USD": "2026-10-31T15:22:43Z",
-  "BTC-USD": "2026-10-29T23:01:23Z",
+  "BTC-USD": "2026-11-01T23:23:56Z",
   "^GSPC": "2026-10-30T14:19:17Z"
  },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 20
+ "seq": 21
 }

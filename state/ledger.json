@@ -440,6 +440,27 @@
    "size_inr": 19984,
    "decision_id": "D-261101-021",
    "ts": "2026-11-01T23:23:56Z"
+  },
+  {
+   "symbol": "^GSPC",
+   "entry": 7624.11,
+   "stop": 7474.32,
+   "target": 7848.8,
+   "predicted_return_pct": 2.95,
+   "risk_pct": 1.96,
+   "rsi": 44.1,
+   "backtest": {
+    "trades": 56,
+    "win_rate_pct": 51.8,
+    "avg_return_pct": 0.08,
+    "worst_pct": -2.48
+   },
+   "bucket": "us_global",
+   "bucket_label": "US / Global",
+   "suggested_qty": 0.0553,
+   "size_inr": 40011,
+   "decision_id": "D-261102-022",
+   "ts": "2026-11-02T14:45:15Z"
   }
  ],
  "positions": [],
@@ -448,9 +469,9 @@
   "CL=F": "2026-10-05T18:45:14Z",
   "ETH-USD": "2026-10-31T15:22:43Z",
   "BTC-USD": "2026-11-01T23:23:56Z",
-  "^GSPC": "2026-10-30T14:19:17Z"
+  "^GSPC": "2026-11-02T14:45:15Z"
  },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 21
+ "seq": 22
 }

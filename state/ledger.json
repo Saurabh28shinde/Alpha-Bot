@@ -503,6 +503,48 @@
    "size_inr": 8889,
    "decision_id": "D-261104-024",
    "ts": "2026-11-04T18:58:24Z"
+  },
+  {
+   "symbol": "BTC-USD",
+   "entry": 76375.66,
+   "stop": 71670.94,
+   "target": 83432.74,
+   "predicted_return_pct": 9.24,
+   "risk_pct": 6.16,
+   "rsi": 39.5,
+   "backtest": {
+    "trades": 87,
+    "win_rate_pct": 56.3,
+    "avg_return_pct": 0.39,
+    "worst_pct": -5.53
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0023,
+   "size_inr": 16594,
+   "decision_id": "D-261105-025",
+   "ts": "2026-11-05T15:39:49Z"
+  },
+  {
+   "symbol": "^GSPC",
+   "entry": 7483.32,
+   "stop": 7297.16,
+   "target": 7762.56,
+   "predicted_return_pct": 3.73,
+   "risk_pct": 2.49,
+   "rsi": 38.5,
+   "backtest": {
+    "trades": 57,
+    "win_rate_pct": 52.6,
+    "avg_return_pct": 0.08,
+    "worst_pct": -2.48
+   },
+   "bucket": "us_global",
+   "bucket_label": "US / Global",
+   "suggested_qty": 0.0566,
+   "size_inr": 40011,
+   "decision_id": "D-261105-026",
+   "ts": "2026-11-05T15:39:51Z"
   }
  ],
  "positions": [],
@@ -510,10 +552,10 @@
  "last_alert": {
   "CL=F": "2026-11-04T18:58:24Z",
   "ETH-USD": "2026-11-03T18:07:56Z",
-  "BTC-USD": "2026-11-01T23:23:56Z",
-  "^GSPC": "2026-11-02T14:45:15Z"
+  "BTC-USD": "2026-11-05T15:39:49Z",
+  "^GSPC": "2026-11-05T15:39:51Z"
  },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 24
+ "seq": 26
 }

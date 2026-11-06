@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-11-06T16:25:31Z",
+ "heartbeat": "2026-11-06T21:40:03Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -75,34 +75,34 @@
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-11-06T16:25:27Z",
+   "last_run": "2026-11-06T21:39:59Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-11-06T16:25:29Z"
+   "last_ok": "2026-11-06T21:40:01Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-11-06T16:25:29Z",
+   "last_run": "2026-11-06T21:40:01Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-11-06T16:25:30Z"
+   "last_ok": "2026-11-06T21:40:02Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-11-06T16:25:30Z",
+   "last_run": "2026-11-06T21:40:02Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-11-06T16:25:31Z"
+   "last_ok": "2026-11-06T21:40:03Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-11-06T16:25:31Z",
+   "last_run": "2026-11-06T21:40:03Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -112,63 +112,63 @@
   {
    "symbol": "ITC.NS",
    "universe": "india_equity",
-   "price": 283.15,
-   "rsi": 68.8,
+   "price": 278.85,
+   "rsi": 65.5,
    "trend_up": false,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "TMPV.NS",
    "universe": "india_equity",
-   "price": 292.0,
-   "rsi": 59.8,
+   "price": 293.7,
+   "rsi": 61.5,
    "trend_up": false,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "RELIANCE.NS",
    "universe": "india_equity",
-   "price": 1320.0,
-   "rsi": 68.2,
+   "price": 1313.4,
+   "rsi": 67.3,
    "trend_up": false,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "HDFCBANK.NS",
    "universe": "india_equity",
-   "price": 788.25,
-   "rsi": 73.9,
-   "trend_up": true,
-   "asof": "2026-11-06"
+   "price": 760.0,
+   "rsi": 68.3,
+   "trend_up": false,
+   "asof": "2026-11-05"
   },
   {
    "symbol": "INFY.NS",
    "universe": "india_equity",
-   "price": 1181.4,
-   "rsi": 64.2,
+   "price": 1167.4,
+   "rsi": 62.4,
    "trend_up": true,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "NIFTYBEES.NS",
    "universe": "india_equity",
-   "price": 284.22,
-   "rsi": 78.4,
+   "price": 279.36,
+   "rsi": 75.0,
    "trend_up": true,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "GOLDBEES.NS",
    "universe": "india_equity",
-   "price": 116.2,
-   "rsi": 43.5,
+   "price": 118.13,
+   "rsi": 48.9,
    "trend_up": false,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   },
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 75632.27,
+   "price": 75665.05,
    "rsi": 37.9,
    "trend_up": true,
    "asof": "2026-11-06"
@@ -176,15 +176,15 @@
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 2226.33,
-   "rsi": 39.0,
+   "price": 2224.54,
+   "rsi": 38.9,
    "trend_up": true,
    "asof": "2026-11-06"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 4072.1,
+   "price": 4072.7,
    "rsi": 47.0,
    "trend_up": false,
    "asof": "2026-11-06"
@@ -192,26 +192,26 @@
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 90.3,
-   "rsi": 41.5,
+   "price": 90.51,
+   "rsi": 41.7,
    "trend_up": true,
    "asof": "2026-11-06"
   },
   {
    "symbol": "^GSPC",
    "universe": "global_commodities",
-   "price": 7421.62,
-   "rsi": 38.0,
+   "price": 7376.86,
+   "rsi": 35.1,
    "trend_up": true,
    "asof": "2026-11-06"
   },
   {
    "symbol": "^NSEI",
    "universe": "global_commodities",
-   "price": 25030.35,
-   "rsi": 78.6,
+   "price": 24536.6,
+   "rsi": 74.7,
    "trend_up": true,
-   "asof": "2026-11-06"
+   "asof": "2026-11-05"
   }
  ],
  "signals": [
@@ -760,6 +760,27 @@
    "size_inr": 40011,
    "decision_id": "D-261105-026",
    "ts": "2026-11-05T15:39:51Z"
+  },
+  {
+   "symbol": "ETH-USD",
+   "entry": 2224.54,
+   "stop": 2035.46,
+   "target": 2508.16,
+   "predicted_return_pct": 12.75,
+   "risk_pct": 8.5,
+   "rsi": 38.9,
+   "backtest": {
+    "trades": 87,
+    "win_rate_pct": 50.6,
+    "avg_return_pct": -0.09,
+    "worst_pct": -11.1
+   },
+   "bucket": "crypto",
+   "bucket_label": "Crypto / Experimental",
+   "suggested_qty": 0.0563,
+   "size_inr": 11760,
+   "decision_id": "D-261106-027",
+   "ts": "2026-11-06T21:40:01Z"
   }
  ],
  "positions": [],

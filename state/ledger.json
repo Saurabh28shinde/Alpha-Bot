@@ -671,17 +671,38 @@
    "size_inr": 9578,
    "decision_id": "D-261112-032",
    "ts": "2026-11-12T22:34:52Z"
+  },
+  {
+   "symbol": "CL=F",
+   "entry": 88.49,
+   "stop": 80.16,
+   "target": 100.98,
+   "predicted_return_pct": 14.11,
+   "risk_pct": 9.41,
+   "rsi": 41.6,
+   "backtest": {
+    "trades": 25,
+    "win_rate_pct": 36.0,
+    "avg_return_pct": -0.47,
+    "worst_pct": -6.23
+   },
+   "bucket": "commodities",
+   "bucket_label": "Futures / Commodities",
+   "suggested_qty": 1.2745,
+   "size_inr": 10627,
+   "decision_id": "D-261116-033",
+   "ts": "2026-11-16T00:07:58Z"
   }
  ],
  "positions": [],
  "closed": [],
  "last_alert": {
-  "CL=F": "2026-11-12T22:34:52Z",
+  "CL=F": "2026-11-16T00:07:58Z",
   "ETH-USD": "2026-11-06T21:40:01Z",
   "BTC-USD": "2026-11-12T01:13:55Z",
   "^GSPC": "2026-11-08T19:49:14Z"
  },
  "tg_offset": 976962623,
  "exits": [],
- "seq": 32
+ "seq": 33
 }

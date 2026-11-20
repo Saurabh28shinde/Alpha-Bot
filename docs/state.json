@@ -1,5 +1,5 @@
 {
- "heartbeat": "2026-11-20T10:40:32Z",
+ "heartbeat": "2026-11-20T18:54:00Z",
  "portfolio": [
   {
    "id": "india_long_term",
@@ -69,40 +69,40 @@
   }
  ],
  "exits": [],
- "usd_inr": 92.66,
+ "usd_inr": 92.67,
  "interval_min": 30,
  "health": {
   "india_equity": {
    "label": "India equity + ETFs",
    "stage": 1,
-   "last_run": "2026-11-20T10:40:31Z",
+   "last_run": "2026-11-20T18:53:57Z",
    "status": "running",
    "ok": 7,
    "failed": [],
-   "last_ok": "2026-11-20T10:40:32Z"
+   "last_ok": "2026-11-20T18:53:59Z"
   },
   "crypto": {
    "label": "Crypto",
    "stage": 2,
-   "last_run": "2026-11-20T10:40:32Z",
+   "last_run": "2026-11-20T18:53:59Z",
    "status": "running",
    "ok": 2,
    "failed": [],
-   "last_ok": "2026-11-20T10:40:32Z"
+   "last_ok": "2026-11-20T18:53:59Z"
   },
   "global_commodities": {
    "label": "Commodities + global indices",
    "stage": 3,
-   "last_run": "2026-11-20T10:40:32Z",
+   "last_run": "2026-11-20T18:53:59Z",
    "status": "running",
    "ok": 4,
    "failed": [],
-   "last_ok": "2026-11-20T10:40:32Z"
+   "last_ok": "2026-11-20T18:54:00Z"
   },
   "options_intraday": {
    "label": "Options / intraday",
    "stage": 4,
-   "last_run": "2026-11-20T10:40:32Z",
+   "last_run": "2026-11-20T18:54:00Z",
    "status": "not_connected",
    "ok": 0,
    "failed": []
@@ -112,106 +112,106 @@
   {
    "symbol": "ITC.NS",
    "universe": "india_equity",
-   "price": 299.1,
-   "rsi": 71.9,
+   "price": 301.0,
+   "rsi": 74.8,
    "trend_up": true,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "TMPV.NS",
    "universe": "india_equity",
-   "price": 266.35,
-   "rsi": 42.9,
+   "price": 263.5,
+   "rsi": 40.9,
    "trend_up": false,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "RELIANCE.NS",
    "universe": "india_equity",
-   "price": 1377.5,
-   "rsi": 75.2,
+   "price": 1375.6,
+   "rsi": 74.9,
    "trend_up": true,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "HDFCBANK.NS",
    "universe": "india_equity",
-   "price": 846.0,
-   "rsi": 78.0,
+   "price": 821.8,
+   "rsi": 73.9,
    "trend_up": true,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "INFY.NS",
    "universe": "india_equity",
-   "price": 1098.0,
-   "rsi": 46.2,
+   "price": 1091.9,
+   "rsi": 44.7,
    "trend_up": false,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "NIFTYBEES.NS",
    "universe": "india_equity",
-   "price": 294.22,
-   "rsi": 79.5,
+   "price": 290.61,
+   "rsi": 76.8,
    "trend_up": true,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "GOLDBEES.NS",
    "universe": "india_equity",
-   "price": 102.21,
-   "rsi": 20.1,
+   "price": 106.3,
+   "rsi": 24.9,
    "trend_up": false,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   },
   {
    "symbol": "BTC-USD",
    "universe": "crypto",
-   "price": 62175.33,
-   "rsi": 21.8,
+   "price": 58388.6,
+   "rsi": 17.2,
    "trend_up": false,
    "asof": "2026-11-20"
   },
   {
    "symbol": "ETH-USD",
    "universe": "crypto",
-   "price": 1758.0,
-   "rsi": 24.2,
+   "price": 1619.77,
+   "rsi": 19.5,
    "trend_up": false,
    "asof": "2026-11-20"
   },
   {
    "symbol": "GC=F",
    "universe": "global_commodities",
-   "price": 3583.4,
-   "rsi": 23.5,
+   "price": 3507.4,
+   "rsi": 21.4,
    "trend_up": false,
    "asof": "2026-11-20"
   },
   {
    "symbol": "CL=F",
    "universe": "global_commodities",
-   "price": 81.21,
-   "rsi": 32.5,
+   "price": 83.06,
+   "rsi": 34.8,
    "trend_up": false,
    "asof": "2026-11-20"
   },
   {
    "symbol": "^GSPC",
    "universe": "global_commodities",
-   "price": 7175.83,
-   "rsi": 31.4,
+   "price": 7033.15,
+   "rsi": 27.4,
    "trend_up": false,
-   "asof": "2026-11-19"
+   "asof": "2026-11-20"
   },
   {
    "symbol": "^NSEI",
    "universe": "global_commodities",
-   "price": 25800.6,
-   "rsi": 78.6,
+   "price": 25514.3,
+   "rsi": 76.2,
    "trend_up": true,
-   "asof": "2026-11-20"
+   "asof": "2026-11-19"
   }
  ],
  "signals": [
